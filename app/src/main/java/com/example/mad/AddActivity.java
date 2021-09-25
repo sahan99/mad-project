@@ -31,8 +31,6 @@ public class AddActivity extends AppCompatActivity {
         contactno = (EditText)findViewById(R.id.txtContactno);
         pic = (EditText)findViewById(R.id.txtImageUrl);
 
-
-
         btnAdd = (Button)findViewById(R.id.btnAdd);
         btnBack = (Button)findViewById(R.id.btnBack);
 
