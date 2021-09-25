@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
     FloatingActionButton floatingActionButton;
 
     @Override
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
@@ -85,6 +86,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void txtSearch(String str)
     {
+
         FirebaseRecyclerOptions<MainModel> options =
                 new FirebaseRecyclerOptions.Builder<MainModel>()
                         .setQuery(FirebaseDatabase.getInstance().getReference().child("supplier").orderByChild("name").startAt(str).endAt(str+"~"), MainModel.class)

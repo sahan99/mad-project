@@ -46,6 +46,7 @@ public class MainAdapter extends FirebaseRecyclerAdapter<MainModel,MainAdapter.m
         holder.location.setText(model.getLocation());
         holder.contactno.setText(model.getContactno());
 
+
         Glide.with(holder.img.getContext())
                 .load(model.getPic())
                 .placeholder(R.drawable.common_google_signin_btn_icon_dark)
@@ -87,6 +88,7 @@ public class MainAdapter extends FirebaseRecyclerAdapter<MainModel,MainAdapter.m
                         map.put("location",location.getText().toString());
                         map.put("contactno",contactno.getText().toString());
                         map.put("pic",pic.getText().toString());
+
 
                         FirebaseDatabase.getInstance().getReference().child("supplier")
                                 .child(getRef(position).getKey()).updateChildren(map)
